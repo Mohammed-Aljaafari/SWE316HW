@@ -209,6 +209,7 @@
     <Compile Include="AV_Ribbon.Designer.cs">
       <DependentUpon>AV_Ribbon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employelist.cs" />
     <Compile Include="Drawer.cs" />
     <Compile Include="Reader.cs" />
     <Compile Include="employe.cs" />

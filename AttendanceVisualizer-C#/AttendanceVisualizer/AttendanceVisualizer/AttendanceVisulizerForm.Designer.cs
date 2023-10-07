@@ -30,21 +30,10 @@ namespace AttendanceVisualizer
         /// </summary>
         private void InitializeComponent()
         {
-            this.ReadSheet_Button = new System.Windows.Forms.Button();
             this.DrawButton = new System.Windows.Forms.Button();
             this.TimeLineDrawingPanel = new System.Windows.Forms.Panel();
             this.SheetContents_ListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // ReadSheet_Button
-            // 
-            this.ReadSheet_Button.Location = new System.Drawing.Point(36, 75);
-            this.ReadSheet_Button.Name = "ReadSheet_Button";
-            this.ReadSheet_Button.Size = new System.Drawing.Size(138, 41);
-            this.ReadSheet_Button.TabIndex = 1;
-            this.ReadSheet_Button.Text = "Read Sheet";
-            this.ReadSheet_Button.UseVisualStyleBackColor = true;
-            this.ReadSheet_Button.Click += new System.EventHandler(this.ReadSheet_Button_Click);
             // 
             // DrawButton
             // 
@@ -80,7 +69,6 @@ namespace AttendanceVisualizer
             this.Controls.Add(this.DrawButton);
             this.Controls.Add(this.TimeLineDrawingPanel);
             this.Controls.Add(this.SheetContents_ListBox);
-            this.Controls.Add(this.ReadSheet_Button);
             this.Name = "AttendanceVisulizerForm";
             this.Text = "AttendanceVisulizerForm";
             this.ResumeLayout(false);
@@ -88,8 +76,6 @@ namespace AttendanceVisualizer
         }
 
         #endregion
-
-        internal System.Windows.Forms.Button ReadSheet_Button;
         internal System.Windows.Forms.Button DrawButton;
         internal System.Windows.Forms.Panel TimeLineDrawingPanel;
         internal System.Windows.Forms.ListBox SheetContents_ListBox;
