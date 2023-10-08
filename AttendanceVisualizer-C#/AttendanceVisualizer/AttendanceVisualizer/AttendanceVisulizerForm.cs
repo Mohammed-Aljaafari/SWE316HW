@@ -15,7 +15,7 @@ namespace AttendanceVisualizer
     public partial class AttendanceVisulizerForm : Form  
     {
          
-       private Employelist list = new Employelist( );
+       private Employelist empolyeeslist = new Employelist( );
         private Reader reader = new Reader();
         private Drawer drawer = new Drawer();
         Excel.Workbook xWorkBook = Globals.ThisAddIn.Application.ActiveWorkbook;
@@ -23,9 +23,9 @@ namespace AttendanceVisualizer
         {
            
             InitializeComponent();
-            list = reader.Read(xWorkBook,1,list);
+            empolyeeslist = reader.Read(xWorkBook,1,empolyeeslist);
             SheetContents_ListBox.Items.Clear();
-            foreach ( employe s in list.GetEmployelists())
+            foreach ( employe s in empolyeeslist.GetEmployelists())
             {
                 
                 SheetContents_ListBox.Items.Add( s.GetID().ToString());
@@ -33,18 +33,14 @@ namespace AttendanceVisualizer
             
 
         }
-        //override
-
-
-      
-        //override
+        
         
         private void DrawButton_Click(object sender, EventArgs e)
         {
             
             Graphics g = TimeLineDrawingPanel.CreateGraphics();
                 string item = SheetContents_ListBox.SelectedItem.ToString();
-            drawer.Draw(list, g,  item);
+            drawer.Draw(empolyeeslist, g,  item);
             
         }
 
