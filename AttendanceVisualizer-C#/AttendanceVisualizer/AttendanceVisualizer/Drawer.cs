@@ -26,12 +26,12 @@ namespace AttendanceVisualizer
             Drawdays(Barx, Bary, GrayPen, g);
             Barx = 75;
             DrawHours(Barx, g);
-
+            TimeSpan c = new TimeSpan(8, 00, 00);
             foreach (employe s in list.GetEmployelists())
             {
                 int barx = 35;
                 int bary = 20;
-                TimeSpan c = new TimeSpan(8, 30, 0);
+                
                 int pixelPerHour = 30;
                 if (s.GetID().ToString() == item)
                 {
@@ -116,6 +116,7 @@ namespace AttendanceVisualizer
                 Barx += 30;
             }
         }
+        
 
     }
 }
